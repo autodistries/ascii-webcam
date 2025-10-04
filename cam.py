@@ -39,7 +39,7 @@ def main():
 	while rval:
 		rval, frame = vc.read()
 		print(toASCII(frame))
-		
+
 
 	sys.exit()
 
@@ -62,7 +62,7 @@ def toASCII(frame, cols = 120, rows = 35):
 	return result
 
 def grayToChar(gray):
-  CHAR_LIST = ' .:-=+*#%@' # Replace by " .',;:clodxkO0KXNWM" if you want more precision.
+	CHAR_LIST = ' .:-=+*#%@' # Replace by " .',;:clodxkO0KXNWM" if you want more precision.
 	num_chars = len(CHAR_LIST)
 	return CHAR_LIST[
 		min(
@@ -70,6 +70,6 @@ def grayToChar(gray):
 			num_chars - 1
 		)
 	]
-	
+
 if __name__ == '__main__':
 		main()
